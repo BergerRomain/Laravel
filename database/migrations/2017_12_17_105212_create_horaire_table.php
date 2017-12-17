@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Place extends Migration
+class CreateHoraireTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class Place extends Migration
      */
     public function up()
     {
-	Schema::create('places', function(Blueprint $table) {
-		$table->increments('numPlace');
-	});
+        Schema::create('horaire', function (Blueprint $table) {
+            $table->dateTime('dateDebut');
+            $table->dateTime('dateFin');
+            $table->timestamps();
+            $table->primary(array('dateDebut', 'dateFin'));
+        });
     }
 
     /**
@@ -25,6 +28,6 @@ class Place extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('places');
+        Schema::dropIfExists('horaire');
     }
 }
