@@ -15,25 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demande_de_place', function() {
-	return view('demande_de_place');
-});
+Route::get('utilisateur/demande_de_place', 'attributionController@create');
 
-Route::get('/place', function() {
+Route::post('utilisateur/demande_de_place', 'attributionController@success');
+
+Route::get('/utilisateur/place', function() {
 	return view('place');
 });
 
-Route::get('/liste_attente', function() {
+Route::get('/utilisateur/liste_attente', function() {
 	return view('liste_attente');
 });
 
-Route::get('/historique_place_attribue', function() {
+Route::get('/utilisateur/historique_place_attribue', function() {
 	return view('historique_place_attribue');
-});
-Route::get('/sql', function() {
-	return view('sql');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/utilisateur/home', 'HomeController@index')->name('home');
