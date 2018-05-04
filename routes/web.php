@@ -19,18 +19,14 @@ Route::get('utilisateur/demande_de_place', 'attributionController@create');
 
 Route::post('utilisateur/demande_de_place', 'attributionController@success');
 
-Route::get('/utilisateur/place', function() {
-	return view('place');
-});
+Route::post('utilisateur/demande_de_place_ok', 'attributionController@retour');
 
-Route::get('/utilisateur/liste_attente', function() {
-	return view('liste_attente');
-});
+Route::get('utilisateur/place', 'placeController@voir');
 
-Route::get('/utilisateur/historique_place_attribue', function() {
-	return view('historique_place_attribue');
-});
+Route::get('utilisateur/liste_attente', 'listeController@voir');
+
+Route::get('utilisateur/historique_place_attribue', 'historiqueController@voir');
 
 Auth::routes();
 
-Route::get('/utilisateur/home', 'HomeController@index')->name('home');
+Route::get('utilisateur/home', 'HomeController@index')->name('home');

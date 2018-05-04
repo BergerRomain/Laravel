@@ -14,10 +14,15 @@
 						<th>places attribués</th>
 						<th>Date de début</th>
 						<th>Date de fin</th>
-						<th>Durée</th>
 					</tr>
 					<tr>
-						<td></td>
+					<?php 
+					     for(){	
+						echo"<td>$numplace</td> 
+						<td>$dateDebut</td> 
+						<td>$dateFin</td>";
+					     }
+					?>
 					</tr>
 				</table>
 			</from>	

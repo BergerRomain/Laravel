@@ -9,11 +9,10 @@
                     
                 <div class="panel-body">
                 	<?php
-                		$placefile=$_POST['placefile'];
-                		if($placefile<>0)
+                		if()
                 			echo"Vous êtes à la place numéro $placefile";
                 		else
-                			echo"Vous n'êtes pas dans la liste";
+                			echo"Vous n'avez pas de place";
                 	?>
                 </div>
             </div>
