@@ -9,11 +9,12 @@
                     
                 <div class="panel-body">
                 	<?php
-				if()
+				if($placefile <> NULL)
                 			echo"Vous êtes le numéro $placefile dans la liste d'attente";
                 		else
                 			echo"Vous n'êtes pas dans la liste";
 			?>
+			<a href="{{ url('/utilisateur/home') }}">Retour</a>
                 </div>
             </div>
         </div>

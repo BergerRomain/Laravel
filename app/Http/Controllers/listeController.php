@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User; 
+use \Auth;
 
-class horaireController extends Controller
+class listeController extends Controller
 {
     public function voir(){
-    	return view('utilisateur.liste_attente');
+	$placefile = Auth::user()->placefile;
+    	return view('utilisateur.liste_attente', compact('placefile'));
     }
 }

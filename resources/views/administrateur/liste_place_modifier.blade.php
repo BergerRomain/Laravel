@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Demande de place</div>
-                    
+                <div class="panel-heading">Liste des places</div>
+
                 <div class="panel-body">
                 	<form action="" method="post">
 				<input type="hidden" name="_token" value="{{ csrf_token() }}"/>
@@ -16,8 +16,8 @@
                 				<?php
                 					for ($i = 1; $i <= 100; $i++)
                 					{
-                						echo"<option>$i</option>";
-                					}
+								echo"<option>$i</option>";
+                				  	}
                 				?>
                 			</select>
                 		</div>
@@ -29,11 +29,9 @@
                 			<label>date de fin : </label>
                 			<input type="date" name="dateFin" id="dateFin">
                 		</div>
-                		<div class="button">
-                			<button type="submit">Valider</button>
-                		</div>
-				<a href="{{ url('/utilisateur/home') }}">Retour</a>
-                	</form>
+				<a href="{{ url('/administrateur/liste_place_modifier_ok') }}">Modifier</a>
+				<a href="{{ url('/administrateur/home') }}">Retour</a>
+			</form>
                 </div>
             </div>
         </div>

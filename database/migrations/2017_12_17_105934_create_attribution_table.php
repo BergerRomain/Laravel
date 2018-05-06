@@ -19,17 +19,13 @@ class CreateAttributionTable extends Migration
             $table->dateTime('dateDebut');
             $table->dateTime('dateFin');
             $table->primary(array('id', 'numPlace', 'dateDebut', 'dateFin'));
-            $table->foreign('id')
-                  ->references('id')
-                  ->on('users');
-            $table->foreign('numPlace')
-                  ->references('numPlace')
-                  ->on('place');
-            $table->foreign(array('dateDebut', 'dateFin'))
-                  ->references(array('dateDebut', 'dateFin'))
-                  ->on('horaire');
             $table->timestamps();
         });
+	Schema::table('attribution', function(Blueprint $table) {
+            $table->foreign(array('id', 'numPlace'))
+                  ->references(array('id', 'numPlace'))
+                  ->on('users');
+	});
     }
 
     /**

@@ -6,5 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class attribution extends Model
 {
-    protected $fillable = ['numplace', 'dateDebut', 'dateFin'];
+    protected $table = 'attribution';
+    protected $fillable = ['id', 'numplace', 'dateDebut', 'dateFin'];
 }

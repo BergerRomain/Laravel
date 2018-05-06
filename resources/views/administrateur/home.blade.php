@@ -19,16 +19,16 @@
                     <table>
                         <caption>Menu : </caption>
                             <tr>
-                                <td></td>
-                                <td><a href="{{ url('') }}">Cliquer ici</a></td>
+                                <td>Liste d'attentes :</td>
+                                <td><a href="{{ url('administrateur/liste_dattentes') }}">Cliquer ici</a></td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td><a href="{{ url('') }}">Cliquer ici</a></td>
+                                <td>Liste places :</td>
+                                <td><a href="{{ url('administrateur/liste_place') }}">Cliquer ici</a></td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td><a href="{{ url('') }}">Cliquer ici</a></td>
+                                <td>Liste des utilisateurs :</td>
+                                <td><a href="{{ url('administrateur/liste_utilisateurs') }}">Cliquer ici</a></td>
                             </tr>
                     </table>
                 </div>
@@ -36,3 +36,4 @@
         </div>
     </div>
 </div>
+@endsection

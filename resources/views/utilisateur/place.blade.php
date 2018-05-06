@@ -9,11 +9,12 @@
                     
                 <div class="panel-body">
                 	<?php
-                		if()
-                			echo"Vous êtes à la place numéro $placefile";
+                		if($numplace <> NULL)
+                			echo"Vous êtes à la place numéro $numplace->numplace";
                 		else
                 			echo"Vous n'avez pas de place";
                 	?>
+			<a href="{{ url('/utilisateur/home') }}">Retour</a>
                 </div>
             </div>
         </div>
